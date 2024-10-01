@@ -2,6 +2,7 @@ import Experience from "@/components/sections/Experience";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 import { NavBar } from "@/components/sections/navBar";
+import {Presentation} from "@/components/sections/Presentation";
 import Projects from "@/components/sections/projects";
 import Technologies from "@/components/sections/technologies";
 
@@ -11,11 +12,13 @@ export default function Home() {
       <div className="max-w-7xl w-full">
 
         <Hero />
-        <NavBar/>
-        <Technologies />
-        <Projects/>
 
-        <Experience/>
+        <NavBar />
+        <Presentation />
+        <Technologies />
+        <Projects />
+
+        <Experience />
 
         <Footer />
       </div>

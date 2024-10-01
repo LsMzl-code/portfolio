@@ -1,7 +1,7 @@
 
 import { workExperience } from "@/constants";
-import ShineBorder from "../ui/shine-border";
 import Image from "next/image";
+import { BorderBeam } from "../ui/border-beam";
 
 
 const Experience = () => {
@@ -12,12 +12,9 @@ const Experience = () => {
          </h1>
          <div className="w-full mt-12 grid lg:grid-cols-2 grid-cols-1 gap-10">
             {workExperience.map((card) => (
-               <ShineBorder
-                  className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2 bg-foreground/5"
-                  color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-                  // duration={Math.floor(Math.random() * 5000) + 5000}
+               <div
+                  className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2 bg-foreground/5 relative rounded-xl"
                   key={card.id}
-                  borderRadius={14}
                >
                   <Image
                      src={card.thumbnail}
@@ -30,8 +27,8 @@ const Experience = () => {
                      <h2 className="text-start text-xl md:text-2xl font-bold">{card.title}</h2>
                      <p className="text-start text-white-100 mt-3 font-medium">{card.desc}</p>
                   </div>
-
-               </ShineBorder>
+                  <BorderBeam size={250} duration={Math.floor(Math.random() * 10) + 10} delay={9} />
+               </div>
             ))}
          </div>
       </section>

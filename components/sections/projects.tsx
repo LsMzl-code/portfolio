@@ -7,7 +7,7 @@ const Projects = () => {
     <section>
       <h1 className="heading">
         Une sélection de mes{" "}
-        <span className="text-purple">projets récents</span>
+        <span className="text-indigo-500">projets récents</span>
       </h1>
       <div className="flex flex-wrap items-center justify-between">
         {projects.map(({ title, description, imageUrl, imageAlt, link, github, iconLists }) => (

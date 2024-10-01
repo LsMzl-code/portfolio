@@ -4,6 +4,7 @@ import { MousePointerClick } from "lucide-react";
 import { MagicBtn } from "../ui/magic-btn";
 import { socialMedia } from "@/constants";
 import Image from "next/image";
+import ShinyButton from "../ui/shiny-button";
 
 const Footer = () => {
    return (
@@ -25,11 +26,7 @@ const Footer = () => {
                achieve your goals.
             </p>
             <a href="mailto:louismzl.dev@gmail.com">
-               <MagicBtn
-                  title="Contact"
-                  icon={<MousePointerClick />}
-                  position="right"
-               />
+               <ShinyButton icon={<MousePointerClick />} position="right">Contact</ShinyButton>
             </a>
          </div>
 

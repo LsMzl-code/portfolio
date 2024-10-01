@@ -36,7 +36,7 @@ const ReviewCard = ({
 
 const Technologies = () => {
   return (
-    <section className="my-20 relative z-50">
+    <section className="py-20 relative z-50">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.name} {...review} />

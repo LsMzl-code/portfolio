@@ -60,7 +60,7 @@ export const BackgroundBeams = React.memo(
     return (
       <div
         className={cn(
-          "absolute h-full -z-10 w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center bg-background",
+          "absolute h-screen left-0 right-0 top-0 -z-10 w-full [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center bg-background",
           className
         )}
       >
