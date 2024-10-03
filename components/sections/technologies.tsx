@@ -25,7 +25,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image width="40" height="40" alt={name} src={img} />
+        <Image width="30" height="30" alt={name} src={img} className="h-10 w-10"/>
         <figcaption className="text-sm font-medium dark:text-white">
           {name}
         </figcaption>
@@ -36,7 +36,7 @@ const ReviewCard = ({
 
 const Technologies = () => {
   return (
-    <section className="py-20 relative z-50">
+    <section className="py-10 lg:py-20 relative z-50">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.name} {...review} />

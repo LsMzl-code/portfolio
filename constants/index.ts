@@ -4,81 +4,93 @@
 export const technos = [
   {
     name: "CSS",
-    img: "/logos/CSS3.png",
+    img: "/svg/css3.svg",
   },
   {
     name: "Git",
-    img: "/logos/Git.png",
+    img: "/svg/git2.svg",
   },
   {
     name: "HTML",
-    img: "/logos/HTML5.png",
+    img: "/svg/html5.svg",
   },
   {
     name: "JavaScript",
-    img: "/logos/JavaScript.png",
+    img: "/svg/javascript.svg",
   },
   {
     name: "NestJs",
-    img: "/logos/Nest.js.png",
+    img: "/svg/nestJs.svg",
   },
   {
     name: "NextJs",
-    img: "/logos/Next.js.png",
+    img: "/svg/next.svg",
   },
   {
     name: "Php",
-    img: "/logos/PHP.png",
+    img: "/svg/php.svg",
   },
   {
     name: "PostGreSql",
-    img: "/logos/PostgresSQL.png",
+    img: "/svg/postgres.svg",
   },
   {
     name: "ReactJs",
-    img: "/logos/React.png",
+    img: "/svg/react.svg",
   },
   {
     name: "Symfony",
-    img: "/logos/Symfony.png",
+    img: "/svg/symfony.svg",
   },
   {
     name: "Tailwind",
-    img: "/logos/Tailwind.png",
+    img: "/svg/tailwind2.svg",
   },
   {
     name: "Typescript",
-    img: "/logos/TypeScript.png",
+    img: "/svg/typescript.svg",
   },
 ];
 
+/**
+ * Projets affichés dans la section Projets.
+ */
 export const projects = [
   {
     title: "Sefca Utilis",
-    description: "Sefca Utilis est une application web qui permet de gérer les dossiers de déclaration de la Sefca.",
-    imageUrl: "/img/projects/sefca.png",
+    description: "Site vitrine de l'entreprise Sefca Utilis. Contient un blog autour de la finance et du monde de l'entreprise.",
+    imageUrl: "/svg/sefca.svg",
     imageAlt: "Sefca Utilis",
     link: "https://sefca.com",
-    github: "https://github.com/sefca-utilis",
-    iconLists: ["/assets/re.svg", "/assets/tail.svg", "/assets/ts.svg", "/assets/three.svg", "/assets/fm.svg"],
+    github: "https://github.com/LsMzl-code/sefca",
+    iconLists: ["/assets/next.svg", "/assets/re.svg", "/assets/tail.svg", "/assets/ts.svg", "/assets/authjs.svg", "/assets/shadcn.svg", "/assets/postgres.svg"],
   },
   {
     title: "Holydevs",
-    description: "Sefca Utilis est une application web qui permet de gérer les dossiers de déclaration de la Sefca.",
-    imageUrl: "/img/projects/sefca.png",
-    imageAlt: "Sefca Utilis",
+    description: "Plateforme permettant la mise en location et réservations de biens privés avec réseau social et messagerie.",
+    imageUrl: "/svg/holydevs.svg",
+    imageAlt: "Holydevs",
     link: "https://sefca.com",
     github: "https://github.com/sefca-utilis",
-    iconLists: ["/assets/re.svg", "/assets/tail.svg", "/assets/ts.svg", "/assets/three.svg", "/assets/fm.svg"],
+    iconLists: ["/assets/next.svg", "/assets/re.svg", "/assets/tail.svg", "/assets/ts.svg", "/assets/c.svg", "/assets/shadcn.svg", "/assets/stripe.svg"],
   },
   {
     title: "Auralis",
-    description: "Sefca Utilis est une application web qui permet de gérer les dossiers de déclaration de la Sefca.",
-    imageUrl: "/img/projects/sefca.png",
-    imageAlt: "Sefca Utilis",
+    description: "Application bancaire permettant de regrouper plusieurs comptes et d’effectuer des transactions.",
+    imageUrl: "/svg/auralis.svg",
+    imageAlt: "Auralis",
     link: "https://sefca.com",
-    github: "https://github.com/sefca-utilis",
-    iconLists: ["/assets/re.svg", "/assets/tail.svg", "/assets/ts.svg", "/assets/three.svg", "/assets/fm.svg"],
+    github: "https://github.com/LsMzl-code/auralis",
+    iconLists: ["/assets/next.svg", "/assets/re.svg", "/assets/tail.svg", "/assets/ts.svg", "/assets/app.svg", "/assets/plaid.svg", "/assets/dwolla.svg", "/assets/shadcn.svg",],
+  },
+  {
+    title: "CareSync",
+    description: "Application permettant aux utilisateurs de gérer leurs soins de santé et de suivre leurs rendez-vous.",
+    imageUrl: "/svg/caresync.svg",
+    imageAlt: "CareSync",
+    link: "https://sefca.com",
+    github: "https://github.com/LsMzl-code/caresync",
+    iconLists: ["/assets/next.svg", "/assets/re.svg", "/assets/tail.svg", "/assets/ts.svg", "/assets/app.svg", "/assets/shadcn.svg",],
   },
 ]
 
@@ -87,44 +99,57 @@ export const socialMedia = [
   {
     id: 1,
     img: "/assets/git.svg",
+    href: "https://github.com/LsMzl-code",
+    title: "Voir mon profil Github",
   },
   {
     id: 2,
     img: "/assets/twit.svg",
+    href: "https://twitter.com/louis_mazzella",
+    title: "Voir mon profil Twitter",
   },
   {
     id: 3,
     img: "/assets/link.svg",
-  },
+    href: "https://www.linkedin.com/in/louis-mazzella-5509292a2/",
+    title: "Voir mon profil LinkedIn",
+  }
 ];
 
+/**
+ * Expériences professionnelles affichées dans la section Expériences.
+ */
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Développeur Web Fullstack",
+    date: "2024 - présent",
+    desc: "Je travaille en complète autonomie guidé par ma curiosité et ma détermination. Je me forme au quotidien afin d'approfondir mes compétences.",
     className: "md:col-span-2",
-    thumbnail: "/assets/exp1.svg",
+    thumbnail: "/svg/dev.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", 
-    thumbnail: "/assets/exp2.svg",
+    title: "Reconversion professionnelle",
+    date: "2023 - 2024",
+    desc: "Après plus de dix ans dans l'hôtellerie-restauration, j'ai choisi de me reconvertir dans le développement web, une passion qui m'anime depuis toujours.",
+    className: "md:col-span-2",
+    thumbnail: "/svg/aleatoire.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", 
-    thumbnail: "/assets/exp3.svg",
+    title: "Cuisinier au CHU de Brest",
+    date: "2019 - 2023",
+    desc: "En tant que cuisinier en milieu hospitalier, je gérais la production quotidienne de repas tout en respectant des normes strictes d'hygiène et de sécurité alimentaire propres à la restauration collective.",
+    className: "md:col-span-2",
+    thumbnail: "/svg/cuisinier.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Cuisinier",
+    date: "2012 - 2019",
+    desc: "Ma carrière de cuisinier m'a permis de développer des compétences solides et ma créativité. J'ai pu gravir les échelons et découvrir de nouvelles saveurs et cultures.",
     className: "md:col-span-2",
-    thumbnail: "/assets/exp4.svg",
+    thumbnail: "/svg/chef.svg",
   },
 ];

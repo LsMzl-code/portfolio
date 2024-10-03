@@ -5,6 +5,8 @@ import React from "react";
 
 import Link from "next/link";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { MousePointerClick } from "lucide-react";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 interface ProjectCardProps {
   title: string;
@@ -19,7 +21,7 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, imageUrl, link, imageAlt, github, iconLists }: ProjectCardProps) {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-gray-950/[.01] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gray-50/[.10] dark:border-gray-50/[.1] border-gray-950/[.1] w-auto sm:w-[26rem] h-auto rounded-xl p-6 border  ">
+      <CardBody className="bg-gray-950/[.01] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gray-50/[.10] dark:border-gray-50/[.1] border-gray-950/[.1] w-auto h-auto rounded-xl p-3 sm:p-6 border  ">
         {/* Titre */}
         <CardItem
           translateZ="50"
@@ -39,10 +41,11 @@ export function ProjectCard({ title, description, imageUrl, link, imageAlt, gith
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
             src={imageUrl}
-            height="1000"
-            width="1000"
-            className="h-52 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            height="300"
+            width="500"
+            className="h-40 sm:h-52 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt={imageAlt}
+            priority
           />
         </CardItem>
         {/* Technologies */}
@@ -51,7 +54,7 @@ export function ProjectCard({ title, description, imageUrl, link, imageAlt, gith
             {iconLists.map((icon, index) => (
               <div
                 key={icon}
-                className="border border-white/[0.2] rounded-full bg-gray-600 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                className="border border-white/[0.2] rounded-full bg-gray-500 dark:bg-gray-700 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                 style={{
                   transform: `translateX(-${5 * index * 2
                     }px)`,
@@ -69,17 +72,20 @@ export function ProjectCard({ title, description, imageUrl, link, imageAlt, gith
             as={Link}
             href={github}
             target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            className="px-4 py-1.5 rounded-md border border-foreground/10 hover:bg-foreground/10 hover:shadow-md"
+            title="Voir le projet sur Github"
           >
-            Github
+            <GitHubLogoIcon className="h-5 w-5" />
           </CardItem>
           <CardItem
             translateZ={20}
             as={Link}
             href={link}
-            className="px-4 py-2 rounded-md bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+            className="px-4 py-2 rounded-md bg-indigo-500 hover:bg-indigo-500/80 text-white text-sm font-bold flex items-center hover:shadow-md"
+            title="Visiter le site"
           >
             Visiter
+            <MousePointerClick className="h-5 w-5 ml-2" />
           </CardItem>
         </div>
       </CardBody>

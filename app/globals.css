@@ -66,10 +66,14 @@
   body {
     @apply bg-background text-foreground;
   }
-}
+  img {
+    width: auto;
+    height: auto;
+ }
 
 @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
+}
 }

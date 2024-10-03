@@ -11,7 +11,10 @@ import ShinyButton from "../ui/shiny-button";
 const Hero = () => {
    return (
       <>
-         <section className="pb-10 pt-16 lg:pt-36 w-full relative">
+         <section className="lg:pb-10 pt-16 lg:pt-36 w-full relative" id="accueil">
+            {/* Logo */}
+            <Image src={'/svg/mzl.svg'} alt="MZL" width={50} height={50} className="absolute top-2 -left-3" />
+
             {/* Neon */}
             <div>
                <Spotlight
@@ -30,18 +33,17 @@ const Hero = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-4 relative my-10 z-10 w-full">
                <div className="flex flex-col items-center justify-center lg:items-start lg:col-span-3 order-2 lg:order-1">
+                  <p className="font-medium text-xl">Bonjour, je suis Louis Mazzella 👋🏻</p>
                   <TextGenerateEffect
                      className="text-center lg:text-start text-[35px] md:text-5xl lg:text-6xl"
-                     words="Je transforme vos idées en solutions digitales sur mesure."
+                     words="Transformons vos idées en solutions digitales sur mesure."
                   />
 
-                  <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-start text-white-100">
-                     Développeur web spécialisé en JavaScript, TypeScript, Next.js
-                     et React, je conçois des applications performantes et
-                     intuitives.
+                  <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-start">
+                     Développeur web spécialisé en TypeScript, Next.js et NestJS, je conçois des applications performantes et intuitives.
                   </p>
                   {/* Projects Button */}
-                  <Link href={"#projects"} title="Mes projets">
+                  <Link href={"#projets"} title="Mes projets">
                      <ShinyButton icon={<MousePointerClick />} position="right">Projets</ShinyButton>
                   </Link>
                </div>
@@ -51,11 +53,12 @@ const Hero = () => {
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-xl font-medium text-white backdrop-blur-3xl">
                      <Image
-                        src={"/img/profile-pic.png"}
+                        src={"/img/profile-pic.webp"}
                         alt="Photo de Louis Mazzella"
                         fill
                         sizes="100%"
                         className="object-cover"
+                        priority
                      />
                   </span>
                </div>

@@ -104,6 +104,7 @@ export const CardItem = ({
   rotateX = 0,
   rotateY = 0,
   rotateZ = 0,
+  title,
   ...rest
 }: {
   as?: React.ElementType;
@@ -115,6 +116,7 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
+  title?: string;
   [key: string]: any;
 }) => {
   //@ts-ignore
@@ -138,6 +140,7 @@ export const CardItem = ({
     <Tag
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
+      title={title}
       {...rest}
     >
       {children}

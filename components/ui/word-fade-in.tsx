@@ -32,12 +32,12 @@ export default function WordFadeIn({
       initial="hidden"
       animate="visible"
       className={cn(
-        "text-sm lg:text-base text-start tracking-[-0.02em] drop-shadow-sm",
+        "text-start tracking-[-0.02em] drop-shadow-sm md:text-lg",
         className,
       )}
     >
       {_words.map((word, i) => (
-        <motion.span key={word} variants={variants} custom={i}>
+        <motion.span key={i} variants={variants} custom={i}>
           {word}{" "}
         </motion.span>
       ))}

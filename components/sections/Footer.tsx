@@ -1,29 +1,25 @@
 import { MousePointerClick } from "lucide-react";
-
-
-import { MagicBtn } from "../ui/magic-btn";
 import { socialMedia } from "@/constants";
 import Image from "next/image";
 import ShinyButton from "../ui/shiny-button";
 
 const Footer = () => {
    return (
-      <footer className="w-full lg:pt-20 pb-10" id="contact">
-         <div className="w-full absolute left-0 bottom-0 min-h-96">
-            {/* <img
-               src="/assets/footer-grid.svg"
-               alt="Grid"
-               className="w-full h-full opacity-50"
-            /> */}
-         </div>
+
+      <footer className="w-full lg:pt-20 pb-10 relative pt-20" id="contact">
+         <Image
+            src="/assets/footer-grid.svg"
+            alt="Grid"
+            className="opacity-50 absolute -top-14 right-0 left-0"
+            width={1000}
+            height={1000}
+         />
          <div className="flex flex-col items-center">
             <h2 className="heading lg:max-w-[45vw]">
-               Ready to take <span className="text-purple">your</span> digital
-               presence to the next level ?
+               Prêt à donner <span className="text-indigo-500">vie</span> à vos projets ?
             </h2>
-            <p className="text-white-200 md:mt-10 my-5 text-center">
-               Reach out to me today and let&apos;s discuss hox I can help you
-               achieve your goals.
+            <p className="text-white-200 md:mt-5 my-5 text-center">
+               Collaborons ensemble, je ne suis qu&apos;à un message de distance !
             </p>
             <a href="mailto:louismzl.dev@gmail.com">
                <ShinyButton icon={<MousePointerClick />} position="right">Contact</ShinyButton>
@@ -36,18 +32,19 @@ const Footer = () => {
             </p>
             <div className="flex items-center md:gap-3 gap-6 max-md:mt-2">
                {socialMedia.map((media) => (
-                  <div key={media.id} className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-blur-lg saturate-150 bg-opacity-75 bg-foreground/20 rounded-lg border border-black-300">
+                  <a key={media.id} title={media.title} href={media.href} target="_blank" className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-blur-lg saturate-150 bg-opacity-75 bg-foreground/20 rounded-lg border border-black-300 hover:bg-indigo-500 transition-colors">
                      <Image
                         src={media.img}
                         alt={media.img}
                         width={20}
                         height={20}
                      />
-                  </div>
+                  </a>
                ))}
             </div>
          </div>
       </footer>
+
    );
 };
 
